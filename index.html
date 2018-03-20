@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Memory game, built with HTML, CSS and Javascript">
+    <meta name="author" content="Alexandra Shcherbinskaya">
+    <title>Match-Match Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="page-header">
+    <h1 class="page-header__title">Welcome to my Memory Game</h1>
+    <p>Go-go-go :)</p>
+</header>
+<main class="page-content">
+    <section class="mg" id="mg">
+        <div class="mg__meta" id="game_meta">
+            <div class="mg__meta--left">
+                <span class="mg__time">Time: <span id="meta_time">00:00</span></span>
+                <span class="mg__moves">Moves: <span id="meta_moves">0</span></span>
+            </div>
+            <div>
+                <button id="restart_game" class="mg__btn">Restart</button>
+            </div>
+        </div>
+
+        <div class="mg__start-screen" id="start_screen">
+            <div class="mg__description">
+                <p>The goal of the Memory game is to find pairs of the equal cards. <br>
+                    Before the beginning you can choose card shirt and game difficulty.</p>
+                <ul class="mg__rules">
+                    <li class="mg__rule">Simply click two tiles to reveal the hidden images.</li>
+                    <li class="mg__rule">If the tiles match they just disappear.</li>
+                    <li class="mg__rule">However, if they do not match they quickly flip back.</li>
+                </ul>
+            </div>
+            <div class="mg__settings-container">
+                <div class="mg__settings-wrapper">
+                    <div class="mg__settings">
+                        <h2 class="mg__title">Choose Card Shirt:</h2>
+                        <ul id="shirt_list" class="mg__settings-list">
+                            <li class="mg__settings-item  mg__settings-item--shirt1  mg__settings-item--active" data-shirt="1">
+                            </li>
+                            <li class="mg__settings-item  mg__settings-item--shirt2" data-shirt="2">
+                            </li>
+                            <li class="mg__settings-item  mg__settings-item--shirt3" data-shirt="3">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mg__settings">
+                        <h2 class="mg__title">Choose Game Difficulty:</h2>
+                        <ul id="difficulty_list" class="mg__settings-list">
+                            <li class="mg__settings-item  mg__settings-item--difficulty  mg__settings-item--difficulty-easy  mg__settings-item--active" data-difficulty="easy">
+                                Easy
+                            </li>
+                            <li class="mg__settings-item  mg__settings-item--difficulty  mg__settings-item--difficulty-medium" data-difficulty="medium">
+                                Medium
+                            </li>
+                            <li class="mg__settings-item  mg__settings-item--difficulty  mg__settings-item--difficulty-hard" data-difficulty="hard">
+                                Hard
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="new_game" class="mg__btn">New Game</button>
+            </div>
+        </div>
+
+        <div class="mg__end-screen" id="end_screen">
+            <h1 class="mg__title">Congratulations!</h1>
+            <img class="mg__end-screen-image" src="img/end-game.png" alt="End Game">
+            <p class="mg__end-screen-message">You won the game in <span id="end_moves" class="mg__end-screen-statistic"></span> moves with time <span id="end_time" class="mg__end-screen-statistic"></span></p>
+        </div>
+
+    </section>
+</main>
+
+<footer class="page-footer">
+    <p>Made for fun by <a href="https://github.com/Elianta">Elianta</a></p>
+</footer>
+
+<template id="mg__card-template">
+    <div class="mg__card">
+        <div class="mg__card--inner">
+            <div class="mg__card--front"></div>
+            <div class="mg__card--back"><img src="img/card-01.png" alt=""></div>
+        </div>
+    </div>
+</template>
+
+<script src="js/game.js"></script>
+<script src="js/game_start.js"></script>
+
+</body>
+</html>

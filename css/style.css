@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'Starcraft';
+    src: url('../font/Starcraft/Starcraft_Normal.woff2') format('woff2'),
+        url('../font/Starcraft/Starcraft_Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sui Generis';
+    src: url('../font/Sui Generis/SuiGeneris.woff2') format('woff2'),
+    url('../font/Sui Generis/SuiGeneris.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, small, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Sui Generis', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.0;
+    color: #fff;
+}
+
+.page-header {
+    position: relative;
+    width: 100%;
+    padding: 20px 0 15px;
+    text-align: center;
+    background-color: #6d4ba9;
+    background-image: linear-gradient(0deg, #544890 0%, #6d4ba9 50%, #8159c8 100%);
+    box-shadow: 0 2px 15px rgba(142, 238, 146, 0.5),
+                0 2px 10px rgba(43, 175, 46, 1);
+}
+
+.page-header__title {
+    margin: 5px 0;
+    font-size: 25px;
+    line-height: 1.2;
+    font-family: Starcraft, "Times New Roman", sans-serif;
+
+}
+
+.page-content {
+    /* To fit all empty place */
+    flex-grow: 1;
+    background-color: #03031A;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
+}
+
+.mg {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 35px 25px;
+}
+
+.mg__meta {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 35px;
+    background-color: rgba(167, 166, 168, 0.2);
+    box-shadow: 0 0 7px rgba(142, 238, 146, 1);
+    border-radius: 7px;
+}
+
+.mg__meta--left {
+    display: flex;
+    padding-top: 15px;
+}
+
+.mg__time {
+    display: block;
+    width: 200px
+}
+
+.mg__moves {
+    display: block;
+}
+
+.mg__btn {
+    padding: 15px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(109, 75, 169, 1) linear-gradient(0deg, #094338 0%, #066b3e 100%);
+    border-radius: 7px;
+    border: none;
+}
+
+.mg__btn:hover {
+    background-color: rgb(92, 64, 143);
+    box-shadow: 0 0 5px rgb(109, 75, 169);
+    filter: brightness(110%);
+}
+
+.mg__btn:active {
+    color: rgb(251, 155, 6);
+    box-shadow: 0 0 7px rgb(251, 155, 6);
+    outline: none;
+}
+
+.mg__start-screen {
+    display: block;
+    line-height: 1.4;
+}
+
+.mg__description {
+    margin-bottom: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    line-height: 1.4;
+    background-color: rgba(167, 166, 168, 0.2);
+    box-shadow: 0 0 7px rgba(142, 238, 146, 1);
+    border-radius: 7px;
+}
+
+.mg__rules {
+    padding: 0;
+    margin-top: 25px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.mg__rule {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+.mg__rule::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #7d56c1;
+}
+
+.mg__settings-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mg__settings-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mg__settings {
+    width: 49%;
+    padding: 20px 10px;
+    background-color: rgba(167, 166, 168, 0.2);
+    box-shadow: 0 0 7px rgba(142, 238, 146, 1);
+    border-radius: 7px;
+}
+
+.mg__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mg__settings-list {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.mg__settings-item {
+    width: 140px;
+    height: 180px;
+    text-align: center;
+    font-family: Starcraft, "Times New Roman", sans-serif;
+    background-color: #001727;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #6d4ba9;
+    border-radius: 6px;
+}
+
+.mg__settings-item--shirt1 {
+    background-image: url('../img/shirts/zerg.jpg');
+}
+.mg__settings-item--shirt2 {
+    background-image: url('../img/shirts/protos.jpg');
+}
+.mg__settings-item--shirt3 {
+    background-image: url('../img/shirts/teran.jpg');
+}
+
+.mg__settings-item:hover {
+    box-shadow: 0 0 7px rgb(109, 75, 169);
+}
+
+.mg__settings-item--difficulty {
+    padding: 20px 5px;
+    background-color: #001727;
+    background-repeat: no-repeat;
+    background-size: 85px auto;
+    background-position: center 70%;
+}
+
+.mg__settings-item--difficulty-easy {
+    background-image: url("../img/difficulty/easy.png");
+}
+
+.mg__settings-item--difficulty-medium {
+    background-image: url("../img/difficulty/medium.png");
+}
+
+.mg__settings-item--difficulty-hard {
+    background-image: url("../img/difficulty/hard.png");
+}
+
+.mg__settings-item--active,
+.mg__settings-item--active:hover {
+    border: 1px solid rgb(251, 155, 6);
+    box-shadow: 0 0 7px rgb(251, 155, 6);
+}
+
+.mg__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(167, 166, 168, 0.2);
+    box-shadow: 0 0 7px rgba(142, 238, 146, 1);
+    border-radius: 7px;
+}
+
+.mg__card {
+    margin: 20px;
+}
+
+.mg__card--inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.mg__card--front,
+.mg__card--back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.mg__card--front {
+    background-color: #001727;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.mg__card--back {
+    transform: rotateY(-180deg);
+}
+
+.mg__card--back > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* some transforms for flipped cards */
+.mg__card--inner.flipped .mg__card--front {
+    transform: rotateY(-180deg);
+}
+
+.mg__card--inner.flipped .mg__card--back {
+    transform: rotateY(0);
+}
+
+.mg__card--inner.correct {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.mg__end-screen {
+    display: none;
+    padding: 35px 35px;
+    text-align: center;
+    background-color: rgba(167, 166, 168, 0.2);
+    box-shadow: 0 0 7px rgba(142, 238, 146, 1);
+    border-radius: 7px;
+}
+
+.mg__end-screen-image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.mg__end-screen-message {
+
+}
+
+.mg__end-screen-statistic {
+    color: #FB9B06;
+}
+
+.page-footer {
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: #6d4ba9;
+    background-image: linear-gradient(0deg, #544890 0%, #6d4ba9 50%, #8159c8 100%);
+    text-align: center;
+}
